@@ -2,11 +2,11 @@
 import PackageTable from "@/app/components/PackageTable";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function PackagesPage() {
   return (
     <div className="space-y-8 p-8 max-w-7xl mx-auto">
-
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
@@ -18,19 +18,18 @@ export default function PackagesPage() {
           </p>
         </div>
 
-        <Button
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-5 rounded-xl shadow-lg transition"
-        >
-          <Plus size={18} />
-          Tambah Paket Baru
-        </Button>
+        <Link href="/packages/create">
+          <Button className="flex items-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-6 py-6 rounded-xl shadow-lg font-semibold transition-all duration-200 hover:scale-105">
+            <Plus size={18} />
+            Tambah Paket Baru
+          </Button>
+        </Link>
       </div>
 
       {/* Table Card */}
       <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
         <PackageTable />
       </div>
-
     </div>
   );
 }

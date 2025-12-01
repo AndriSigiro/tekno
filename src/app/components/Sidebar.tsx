@@ -31,7 +31,7 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="flex items-center gap-3 p-6 border-b border-gray-100">
         <Avatar className="ring-2 ring-blue-500">
-          <AvatarImage src="/logo.png" alt="TOBA TRIP Logo" />
+          <AvatarImage src="/logo.jpg" alt="TOBA TRIP Logo" />
           <AvatarFallback>TT</AvatarFallback>
         </Avatar>
         <div className="flex flex-col">
