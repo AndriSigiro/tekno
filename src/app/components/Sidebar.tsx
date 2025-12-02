@@ -21,9 +21,9 @@ const navItems = [
   { name: "Packages", href: "/packages", icon: Package },
   { name: "Users", href: "/users", icon: Users },
   { name: "Transactions", href: "/transactions", icon: CreditCard },
-  { name: "Settings", href: "/settings", icon: Settings },
   { name: "Vouchers", href: "/vouchers", icon: Ticket },
-  { name: "Rating", href: "/rating", icon: Star }, // Ganti icon menjadi Star
+  { name: "Rating", href: "/rating", icon: Star },
+  { name: "Settings", href: "/settings", icon: Settings },
 ];
 
 export default function Sidebar() {
