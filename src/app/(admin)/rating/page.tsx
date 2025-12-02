@@ -98,7 +98,7 @@ export default function RatingPage() {
     return matchesFilter && matchesSearch;
   });
 
-  const StarRating = ({ rating, size = 'small' }) => {
+  const StarRating = ({ rating, size = 'small' }: { rating: number; size?: 'small' | 'large' }) => {
     const sizeClass = size === 'large' ? 'w-6 h-6' : 'w-4 h-4';
     return (
       <div className="flex gap-1">
