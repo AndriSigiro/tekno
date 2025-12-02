@@ -12,6 +12,7 @@ import {
   CreditCard,
   Settings,
   LogOut,
+  Ticket
 } from "lucide-react";
 
 const navItems = [
@@ -20,6 +21,8 @@ const navItems = [
   { name: "Users", href: "/users", icon: Users },
   { name: "Transactions", href: "/transactions", icon: CreditCard },
   { name: "Settings", href: "/settings", icon: Settings },
+  {name: "Vouchers", href: "/vouchers",icon: Ticket,
+  },
 ];
 
 export default function Sidebar() {
@@ -27,7 +30,6 @@ export default function Sidebar() {
 
   return (
     <aside className="w-72 bg-white border-r border-gray-200 flex flex-col shadow-sm">
-
       {/* Logo */}
       <div className="flex items-center gap-3 p-6 border-b border-gray-100">
         <Avatar className="ring-2 ring-blue-500">
@@ -38,9 +40,7 @@ export default function Sidebar() {
           <span className="text-lg font-extrabold text-blue-900">
             TOBA TRIP
           </span>
-          <span className="text-xs text-gray-400">
-            Admin Panel
-          </span>
+          <span className="text-xs text-gray-400">Admin Panel</span>
         </div>
       </div>
 
@@ -59,8 +59,14 @@ export default function Sidebar() {
                     : "text-gray-600 hover:bg-gray-100"
                 }`}
               >
-                <item.icon className={`w-5 h-5 ${active ? "text-white" : "text-gray-400"}`} />
-                <span className={`font-medium ${active ? "font-semibold" : ""}`}>
+                <item.icon
+                  className={`w-5 h-5 ${
+                    active ? "text-white" : "text-gray-400"
+                  }`}
+                />
+                <span
+                  className={`font-medium ${active ? "font-semibold" : ""}`}
+                >
                   {item.name}
                 </span>
               </div>
@@ -83,7 +89,6 @@ export default function Sidebar() {
           Logout
         </Button>
       </div>
-
     </aside>
   );
 }
